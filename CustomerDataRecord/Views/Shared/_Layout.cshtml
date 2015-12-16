@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PDM Technology</title>
+        @Styles.Render("~/Content/css")
+     <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />     
+    <link href="~/Content/DataTables/css/jquery.dataTables_themeroller.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")      
+
+</head>
+<body>
+
+    @{ 
+      Html.RenderPartial("_NavbarCarrouselPartialView");
+    }
+
+    <div class="container body-content" id="contbody">
+
+        @RenderBody()
+        <hr />
+    </div> <!--  </div> end body content -->
+    
+    <!-- footer section start-->
+    <footer class="container">      
+        <div class="row">
+            <div class="col-md-4">
+                <address>
+                    Sønderbro 7, 2.th <br />
+                    9000 Aalborg <br />
+                    Denmark
+                </address>
+            </div>
+           
+               <div class="col-md-4" id="googleMap">
+                 
+
+                </div>
+                <div class="col-md-4">
+
+                    <address>
+                        Sønderbro 7, 2.th <br />
+                        9000 Aalborg <br />
+                        Denmark
+                    </address>
+
+                </div>
+               
+            </div>
+
+        <!--Buttom Section-->
+
+        <div class="bottom-footer">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-8">
+                    <ul class="nav navbar-nav pull-right">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>                       
+                        <li> @Html.ActionLink("Contact", "Contact", "Home") </li>
+                        <li>@Html.ActionLink("Company", "Index", "Companies")</li>                       
+                    </ul>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    &copy; @DateTime.Now.Year
+                </div>
+            </div>
+        </div> <!--The end of bottom body-->
+    </footer>
+    <!--   </div> -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)    
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="~/Scripts/myGoogleMap.js"></script>   
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+   
+</body>
+</html>

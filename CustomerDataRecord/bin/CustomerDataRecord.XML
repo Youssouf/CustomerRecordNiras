@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomerDataRecord</name>
+    </assembly>
+    <members>
+        <member name="T:CustomerDataRecord.Controllers.CompaniesController">
+            <summary>
+            A Companies controller class, which encapsulates the methods called users actions.
+            </summary>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Index">
+            <summary>
+             Retunrs a list of Company to the wiew
+            </summary>
+            <returns> company list to view </returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Details(System.Nullable{System.Int32})">
+            <summary>
+             Get the detail of each company based on the company id
+            </summary>
+            <param name="id"> An integer company id</param>
+            <returns> A Company object to list</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Create">
+            <summary>
+            Create an insert a company  object to list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Create(CustomerDataRecord.Models.Company)">
+            <summary>
+            Create a new company object an inserts it to the list.
+            </summary>
+            <param name="company"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Update a  caompany info based on the a specific id
+            </summary>
+            <param name="id"> An integer id</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Edit(CustomerDataRecord.Models.Company)">
+            <summary>
+            Update a company info and saves it to the db.
+            </summary>
+            <param name="company"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Delete a Company from the list based on a specific id
+            </summary>
+            <param name="id"> An integer id</param>
+            <returns> partial view of company model</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Post method for deleting  a specific company
+            </summary>
+            <param name="id"> An integer id company id</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.FindCustomerForCompany(System.Int32)">
+            <summary>
+             Search a list of customers for a company.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.GetCompanyEmployees(System.Int32)">
+            <summary>
+             find the employers by employee id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.FindCompanyById(System.Nullable{System.Int32})">
+            <summary>
+            Search a specific comapny based on an integer id
+            </summary>
+            <param name="id"></param>
+            <returns> A company object is returned</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.FullName">
+            <summary>
+            Query  the company and Print company name and address 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CompaniesController.Dispose(System.Boolean)">
+            <summary>
+            Implements an IDisposable interface in order to clean up the unmanaged resources
+            </summary>
+            <param name="disposing"> a boolean parameter </param>
+        </member>
+        <member name="T:CustomerDataRecord.Controllers.CustomersController">
+            <summary>
+             The customer controller  inherit fronm base class Controller  whcih encapsulate the different user anction
+            </summary>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Index">
+            <summary>
+              This method returns a list of customers     
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Details(System.Nullable{System.Int32})">
+            <summary>
+            This Method provides the details of a specific Customer
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Create">
+            <summary>
+            Get function to create  a new customer 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Create(CustomerDataRecord.Models.Customer)">
+            <summary>
+            Post Method to create a customer
+            </summary>
+            <param name="customer">Customer object </param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Edit(System.Int32)">
+            <summary>
+             Update the information of a customer based on the id
+            </summary>
+            <param name="id">  an integer id  for the specific customer.</param>
+            <returns> Returns a customer to view</returns>
+            
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Edit(CustomerDataRecord.Models.Customer)">
+            <summary>
+            Post method for creating  a new customer object
+            </summary>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Deleting a customer based on the specific id 
+            </summary>
+            <param name="id"> an integer customer id</param>
+            <returns>Partial view based on customer model.</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Post method deleting  a specific customer based on an integer customer id.
+            </summary>
+            <param name="id"></param>
+            <returns> Delete  a specific customer and redirected to the customer list.</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.CustomerDetails(System.Int32)">
+            <summary>
+            Find a specific customer based on the an integer id.
+            </summary>
+            <param name="id"> An integer customer id</param>
+            <returns>A partial view based on the selected customed  is returned</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.GetCustomerOrderList(System.Int32)">
+            <summary>
+            Based on  an integer customer id, a detailed inforamtion  of each  order of a specific customer is returned.
+            </summary>
+            <param name="id">An integer customer id</param>
+            <returns>A partial view is returned</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.FindCustomerByNameOrByCountry(System.String,System.String)">
+            <summary>
+            Search  a customer based on country or a specific string
+            </summary>
+            <param name="stringKey">A string for the name of a customer</param>
+            <param name="countryKey">string for the country</param>
+            <returns> return a list of cusomer to the view.</returns>   
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.FindCompanyForCustomerPartial(System.Nullable{System.Int32})">
+            <summary>
+             Find all Companies for a given customer id 
+            </summary>
+            <param name="id"> An integer for customer id </param>
+            <returns> Partial view of company list</returns>       
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.GetCustomerById(System.Int32)">
+            <summary>
+             Find  a customer by unsing its id.
+            </summary>
+            <param name="id">Based on a customer id a customer object is returned</param>
+            <returns> customer object</returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.GetCustomerById">
+            <summary>
+            This method returns a list of customer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.GetCompanyNameByName(System.String)">
+            <summary>
+             Searchs a company by name
+            </summary>
+            <param name="compName"> parameter name for specific customer</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.CustomersController.Dispose(System.Boolean)">
+            <summary>
+            Implement IDisposable interface in order  to clean up  the unmanaged resources.
+            </summary>
+            <param name="disposing"> An integer parameter </param>
+        </member>
+        <member name="T:CustomerDataRecord.Controllers.EmployeesController">
+            <summary>
+            Employees controller class
+            </summary>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.EmployeesController.Index">
+            <summary>
+             Presents a list of Employees
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.EmployeesController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Info detail of an Employee based on id
+            </summary>
+            <param name="id"></param>
+            <returns>Render an employee model </returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.EmployeesController.Create">
+            <summary>
+            Create an Employee object using a specific company name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.EmployeesController.Create(CustomerDataRecord.Models.Employees)">
+            <summary>
+            Post method tocreate an employee.
+            </summary>
+            <param name="employees"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.EmployeesController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Updtate  an employee info
+            </summary>
+            <param name="id">An integer Employee id</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.ProductsController.Index">
+            <summary>
+            Presents a list of  Products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.SuppliersController.Index">
+            <summary>
+            Presents the list of upplers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.SuppliersController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Presents the details the selected element from supplier list.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerDataRecord.Controllers.SuppliersController.Create">
+            <summary>
+            Get function to  create  a supplier object
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
