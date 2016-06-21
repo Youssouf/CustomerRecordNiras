@@ -17,13 +17,12 @@ namespace CustomerDataRecord
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
            
             
             // Secure access of the directory
 
 
-            GlobalFilters.Filters.Add( new AuthorizeAttribute());
+           // GlobalFilters.Filters.Add( new AuthorizeAttribute());
         }
     }
 }
